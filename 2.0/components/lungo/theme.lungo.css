@@ -1,0 +1,445 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+/**
+* Stylesheet
+*
+* @namespace Lungo.Theme
+* @class Default
+*
+* @author Javier Jimenez Villar <javi@tapquo.com> || @soyjavi
+
+-------------------------- THEME --------------------------*/
+BODY
+{
+	background-color: #222;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 1.3em;
+	letter-spacing: -0.05em;
+}
+.theme, LI.theme, A.theme
+{
+	background-color: THEME-dark;
+}
+.theme:active, LI.theme:active, A.theme:active
+{
+	background-color: #0093D5;
+}
+[data-control="pull"]
+{
+	color: #666;
+	-webkit-text-shadow: 0 1px 0 #fff;
+	-moz-text-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 #FFF;
+}
+/*-------------------------- LAYOUT COLORS --------------------------*/
+SECTION > HEADER
+{
+	background-color: #2E8648;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #099229, inset 0 -1px 0 #2E8648;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #099229, inset 0 -1px 0 #2E8648;
+	box-shadow: inherit;
+	color: #FFF;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+SECTION > FOOTER, SECTION NAV.groupbar
+{
+	background-color: #222;
+	-webkit-box-shadow: inset 0 3px 0 #1d1d1d;
+	-moz-box-shadow: inset 0 3px 0 #1d1d1d;
+	box-shadow: inset 0 3px 0 #1D1D1D;
+}
+SECTION > ARTICLE, SECTION > [data-control="pull"]
+{
+	background-color: #F4F5F5;
+}
+SECTION > ARTICLE.splash, SECTION > [data-control="pull"].splash
+{
+	background: #222;
+	color: #FFF;
+}
+SECTION.aside
+{
+	-webkit-box-shadow: -1px 0 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: -1px 0 2px rgba(0,0,0,0.2);
+	box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+}
+SECTION.aside.right
+{
+	-webkit-box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+	box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+}
+ASIDE
+{
+	background-color: #1D1D1D;
+	color: #FFF;
+}
+ASIDE > HEADER, ASIDE > FOOTER
+{
+	background-color: #181818;
+}
+ASIDE > HEADER
+{
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #222, inset 0 -1px 0 #141414;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #222, inset 0 -1px 0 #141414;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 1px 0 #222, inset 0 -1px 0 #141414;
+}
+/*-------------------------- NAVIGATION --------------------------*/
+SECTION > HEADER > NAV A:not(.button)
+{
+	color: #64D686;
+	-webkit-text-shadow: 0 1px 0 #20baff;
+	-moz-text-shadow: 0 1px 0 #20baff;
+	text-shadow: 0 1px 0 #50B144;
+}
+SECTION > HEADER > NAV A:not(.button):active
+{
+	color: #264F2D;
+}
+SECTION > NAV.groupbar > A.active
+{
+	-webkit-box-shadow: inset 0 -3px 0 #0093d5;
+	-moz-box-shadow: inset 0 -3px 0 #0093d5;
+	box-shadow: inset 0 -3px 0 #008DCF;
+}
+SECTION > FOOTER > NAV > A, NAV.groupbar > A
+{
+	color: #888;
+}
+SECTION > FOOTER > NAV > A.active, NAV.groupbar > A.active
+{
+	color: #FFF;
+}
+SECTION > FOOTER > NAV > A
+{
+	-webkit-box-shadow: 1px 0 0 #1d1d1d;
+	-moz-box-shadow: 1px 0 0 #1d1d1d;
+	box-shadow: 1px 0 0 #1D1D1D;
+}
+SECTION > FOOTER > NAV > A.active
+{
+	color: #FFF;
+	background-color: #1D1D1D;
+	-webkit-box-shadow: inset 0 3px 0 #0093d5;
+	-moz-box-shadow: inset 0 3px 0 #0093d5;
+	box-shadow: inset 0 3px 0 #2BAA37;
+}
+ASIDE NAV A
+{
+	color: #4E4E4E;
+}
+ASIDE NAV A:active
+{
+	color: #919191;
+}
+/*-------------------------- LISTS --------------------------*/
+SECTION .list LI
+{
+	background: #FFF;
+}
+SECTION .list LI:not(.anchor)
+{
+	border-bottom: 1px inset #EBEBEB;
+}
+SECTION .list LI.secondary
+{
+	-webkit-box-shadow: inset 4px 0px 0px #bfbfbf;
+	-moz-box-shadow: inset 4px 0px 0px #bfbfbf;
+	box-shadow: inset 4px 0px #BFBFBF;
+}
+SECTION .list LI.accept
+{
+	-webkit-box-shadow: inset 4px 0px 0px #3fb58e;
+	-moz-box-shadow: inset 4px 0px 0px #3fb58e;
+	box-shadow: inset 4px 0px #3FB58E;
+}
+SECTION .list LI.cancel
+{
+	-webkit-box-shadow: inset 4px 0px 0px #ee6557;
+	-moz-box-shadow: inset 4px 0px 0px #ee6557;
+	box-shadow: inset 4px 0px #EE6557;
+}
+SECTION .list LI, SECTION .list LI A
+{
+	color: #333;
+}
+SECTION .list LI.anchor, SECTION .list LI A.anchor
+{
+	background: #222;
+}
+SECTION .list LI.dark, SECTION .list LI A.dark
+{
+	background: #595959;
+}
+SECTION .list LI.selectable:active, SECTION .list LI A.selectable:active, SECTION .list LI.theme, SECTION .list LI A.theme, SECTION .list LI.active, SECTION .list LI A.active
+{
+	background: #03B1FF;
+}
+SECTION .list LI.light, SECTION .list LI A.light
+{
+	background: #EBEBEB;
+	color: #7A7A7A;
+}
+SECTION .list LI.dark, SECTION .list LI A.dark, SECTION .list LI.selectable:active, SECTION .list LI A.selectable:active, SECTION .list LI.theme, SECTION .list LI A.theme, SECTION .list LI.anchor, SECTION .list LI A.anchor, SECTION .list LI.dark SMALL, SECTION .list LI A.dark SMALL, SECTION .list LI.selectable:active SMALL, SECTION .list LI A.selectable:active SMALL, SECTION .list LI.theme SMALL, SECTION .list LI A.theme SMALL, SECTION .list LI.anchor SMALL, SECTION .list LI A.anchor SMALL, SECTION .list LI.dark .right:not(.tag), SECTION .list LI A.dark .right:not(.tag), SECTION .list LI.selectable:active .right:not(.tag), SECTION .list LI A.selectable:active .right:not(.tag), SECTION .list LI.theme .right:not(.tag), SECTION .list LI A.theme .right:not(.tag), SECTION .list LI.anchor .right:not(.tag), SECTION .list LI A.anchor .right:not(.tag)
+{
+	color: #FFF;
+}
+SECTION .list LI SMALL, SECTION .list LI A SMALL, SECTION .list LI .right:not(.tag), SECTION .list LI A .right:not(.tag)
+{
+	color: #7A7A7A;
+}
+.list:not(.indented) LI.dark, .list:not(.indented) LI.theme, .list:not(.indented) LI.light
+{
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+ASIDE .list LI
+{
+	background: none;
+}
+ASIDE .list LI:not(:first-child)
+{
+	border-top: 1px solid #222;
+}
+ASIDE .list LI:not(:last-child)
+{
+	border-bottom: 1px solid #141414;
+}
+ASIDE .list LI.active
+{
+	background: #3B494F;
+	border-color: transparent;
+}
+ASIDE .list LI.active STRONG, ASIDE .list LI.active SMALL, ASIDE .list LI.active .icon
+{
+	color: #FFF;
+}
+ASIDE .list LI STRONG
+{
+	color: #999;
+}
+ASIDE .list LI SMALL, ASIDE .list LI .icon
+{
+	color: #666;
+}
+/*-------------------------- TAG --------------------------*/
+.tag:not(.icon)
+{
+	color: #FFF;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-weight: 700 !important;
+}
+.tag:not(.icon).count
+{
+	background-color: #0093D5;
+}
+.tag:not(.icon) HEADER .count
+{
+	background-color: THEME-dark !important;
+}
+FOOTER .tag:not(.icon)
+{
+	-webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 1px 1px rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.5);
+	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+/*-------------------------- NOTIFICATION --------------------------*/
+.notification
+{
+	color: #FFF;
+}
+.notification .window.growl
+{
+	background: rgba(0, 0, 0, 0.8);
+}
+.notification .window:not(.growl)
+{
+	background: #E6E6E6;
+	color: #222;
+	-webkit-box-shadow: 0 0 8px #000;
+	-moz-box-shadow: 0 0 8px #000;
+	box-shadow: 0 0 8px #000;
+}
+.notification .window:not(.growl) BUTTON, .notification .window:not(.growl) .button
+{
+	background: #FFF !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	color: #007DB5 !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+	border: none !important;
+	margin-bottom: 1px;
+}
+.notification .window:not(.growl).error
+{
+	background: #DD2916;
+	color: #FFF;
+}
+.notification .window:not(.growl).success
+{
+	background: #2F886B;
+	color: #FFF;
+}
+/*-------------------------- BUTTONS --------------------------*/
+HEADER .button, HEADER BUTTON
+{
+	background-color: #007DB5;
+	-webkit-box-shadow: 0 1px 0 #03b1ff, inset 0 1px 0 #00608a;
+	-moz-box-shadow: 0 1px 0 #03b1ff, inset 0 1px 0 #00608a;
+	box-shadow: 0 1px 0 #03B1FF, inset 0 1px 0 #00608A;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+HEADER .button:active, HEADER BUTTON:active
+{
+	background-color: #005880;
+}
+ARTICLE .button, ARTICLE BUTTON
+{
+	-webkit-border-radius: FORM-border-radius;
+	-moz-border-radius: FORM-border-radius;
+	border-radius: FORM-border-radius;
+	color: #FFF;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+ARTICLE .button:active, ARTICLE BUTTON:active
+{
+	-webkit-box-shadow: inset 0 0 128px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 0 128px rgba(0,0,0,0.25);
+	box-shadow: inset 0 0 128px rgba(0, 0, 0, 0.25);
+	border-color: none;
+}
+ARTICLE .button.secondary, ARTICLE BUTTON.secondary
+{
+	color: #666 !important;
+}
+ARTICLE .button[disabled], ARTICLE BUTTON[disabled]
+{
+	background-color: #000;
+}
+ARTICLE BUTTON, ARTICLE .button, ARTICLE .tag:not(.icon)
+{
+	background-color: #007DB5;
+}
+ARTICLE BUTTON.secondary, ARTICLE .button.secondary, ARTICLE .tag:not(.icon).secondary
+{
+	background-color: #BFBFBF;
+}
+ARTICLE BUTTON.accept, ARTICLE .button.accept, ARTICLE .tag:not(.icon).accept
+{
+	background-color: #3FB58E;
+}
+ARTICLE BUTTON.cancel, ARTICLE .button.cancel, ARTICLE .tag:not(.icon).cancel
+{
+	background-color: #EE6557;
+}
+/*-------------------------- BUTTONS --------------------------*/
+FORM LABEL, .form LABEL
+{
+	color: #AAA;
+	font-weight: 300;
+}
+FORM FIELDSET, .form FIELDSET
+{
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+}
+FORM FIELDSET .icon, .form FIELDSET .icon
+{
+	color: #CCC;
+}
+FORM INPUT[type="text"], .form INPUT[type="text"], FORM INPUT[type="password"], .form INPUT[type="password"], FORM INPUT[type="date"], .form INPUT[type="date"], FORM INPUT[type="datetime"], .form INPUT[type="datetime"], FORM INPUT[type="email"], .form INPUT[type="email"], FORM INPUT[type="number"], .form INPUT[type="number"], FORM INPUT[type="search"], .form INPUT[type="search"], FORM INPUT[type="tel"], .form INPUT[type="tel"], FORM INPUT[type="time"], .form INPUT[type="time"], FORM INPUT[type="url"], .form INPUT[type="url"], FORM SELECT, .form SELECT, FORM TEXTAREA, .form TEXTAREA
+{
+	background-color: #FFF;
+	color: rgba(0, 0, 0, 0.75);
+	border: 1px solid #DDD;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+FORM INPUT[type="text"].error, .form INPUT[type="text"].error, FORM INPUT[type="password"].error, .form INPUT[type="password"].error, FORM INPUT[type="date"].error, .form INPUT[type="date"].error, FORM INPUT[type="datetime"].error, .form INPUT[type="datetime"].error, FORM INPUT[type="email"].error, .form INPUT[type="email"].error, FORM INPUT[type="number"].error, .form INPUT[type="number"].error, FORM INPUT[type="search"].error, .form INPUT[type="search"].error, FORM INPUT[type="tel"].error, .form INPUT[type="tel"].error, FORM INPUT[type="time"].error, .form INPUT[type="time"].error, FORM INPUT[type="url"].error, .form INPUT[type="url"].error, FORM SELECT.error, .form SELECT.error, FORM TEXTAREA.error, .form TEXTAREA.error, FORM INPUT[type="text"]:required, .form INPUT[type="text"]:required, FORM INPUT[type="password"]:required, .form INPUT[type="password"]:required, FORM INPUT[type="date"]:required, .form INPUT[type="date"]:required, FORM INPUT[type="datetime"]:required, .form INPUT[type="datetime"]:required, FORM INPUT[type="email"]:required, .form INPUT[type="email"]:required, FORM INPUT[type="number"]:required, .form INPUT[type="number"]:required, FORM INPUT[type="search"]:required, .form INPUT[type="search"]:required, FORM INPUT[type="tel"]:required, .form INPUT[type="tel"]:required, FORM INPUT[type="time"]:required, .form INPUT[type="time"]:required, FORM INPUT[type="url"]:required, .form INPUT[type="url"]:required, FORM SELECT:required, .form SELECT:required, FORM TEXTAREA:required, .form TEXTAREA:required
+{
+	border-color: color_alert;
+	color: color_alert;
+	background-color: rgba(198, 15, 19, 0.1);
+}
+FORM INPUT[type="text"]:focus, .form INPUT[type="text"]:focus, FORM INPUT[type="password"]:focus, .form INPUT[type="password"]:focus, FORM INPUT[type="date"]:focus, .form INPUT[type="date"]:focus, FORM INPUT[type="datetime"]:focus, .form INPUT[type="datetime"]:focus, FORM INPUT[type="email"]:focus, .form INPUT[type="email"]:focus, FORM INPUT[type="number"]:focus, .form INPUT[type="number"]:focus, FORM INPUT[type="search"]:focus, .form INPUT[type="search"]:focus, FORM INPUT[type="tel"]:focus, .form INPUT[type="tel"]:focus, FORM INPUT[type="time"]:focus, .form INPUT[type="time"]:focus, FORM INPUT[type="url"]:focus, .form INPUT[type="url"]:focus, FORM SELECT:focus, .form SELECT:focus, FORM TEXTAREA:focus, .form TEXTAREA:focus
+{
+	background: #FAFAFA;
+	border-color: #0093D5;
+	color: rgba(0, 0, 0, 0.75);
+}
+FORM INPUT[type="text"][disabled], .form INPUT[type="text"][disabled], FORM INPUT[type="password"][disabled], .form INPUT[type="password"][disabled], FORM INPUT[type="date"][disabled], .form INPUT[type="date"][disabled], FORM INPUT[type="datetime"][disabled], .form INPUT[type="datetime"][disabled], FORM INPUT[type="email"][disabled], .form INPUT[type="email"][disabled], FORM INPUT[type="number"][disabled], .form INPUT[type="number"][disabled], FORM INPUT[type="search"][disabled], .form INPUT[type="search"][disabled], FORM INPUT[type="tel"][disabled], .form INPUT[type="tel"][disabled], FORM INPUT[type="time"][disabled], .form INPUT[type="time"][disabled], FORM INPUT[type="url"][disabled], .form INPUT[type="url"][disabled], FORM SELECT[disabled], .form SELECT[disabled], FORM TEXTAREA[disabled], .form TEXTAREA[disabled]
+{
+	background: #EEE;
+	border-color: #AAA;
+	color: #999;
+}
+FORM .select:after, .form .select:after
+{
+	background: #D0D4C6;
+	color: #FFF;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
+}
+FORM INPUT[type=range], .form INPUT[type=range]
+{
+	-webkit-box-shadow: 'inset 0 1px 2px rgba(0,0,0,0.1)';
+	-moz-box-shadow: 'inset 0 1px 2px rgba(0,0,0,0.1)';
+	box-shadow: 0px 0px;
+}
+FORM INPUT[type=range]:not(.checkbox), .form INPUT[type=range]:not(.checkbox)
+{
+	background-color: #DDD;
+}
+FORM INPUT[type=range]:not(.checkbox):active, .form INPUT[type=range]:not(.checkbox):active
+{
+	background-color: #03B1FF;
+}
+FORM INPUT[type=range].checkbox, .form INPUT[type=range].checkbox
+{
+	background-color: #AAA;
+	color: rgba(255, 255, 255, 0.6);
+}
+FORM INPUT[type=range].checkbox.active, .form INPUT[type=range].checkbox.active
+{
+	color: #FFF;
+	background-color: #03B1FF;
+}
+FORM INPUT[type=range]::-webkit-slider-thumb, .form INPUT[type=range]::-webkit-slider-thumb
+{
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #E7EAE2;
+	border: 1px solid #D0D4C6;
+}
+FORM INPUT[type=range]::-webkit-slider-thumb::after, .form INPUT[type=range]::-webkit-slider-thumb::after
+{
+	background: #D0D4C6;
+}
+FORM .progress .bar, .form .progress .bar
+{
+	background-color: #DDD;
+}
+FORM .progress .bar .value, .form .progress .bar .value
+{
+	background-color: #03B1FF;
+}

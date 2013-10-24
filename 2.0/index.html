@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pedaleros</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- iPhone -->
+    <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPhone 5 -->
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPad -->
+    <link href="http://lungo.tapquo.com/resources/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPad (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Lungo - Stylesheets -->
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="components/lungo/theme.lungo.css">
+
+
+    <script src="components/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="components/leaflet/leaflet.css" />
+    <script src="js/KML.js"></script>
+    
+
+    <style>
+        #map {widh: 100%; height: 90%;    position:relative;} 
+    </style>        
+        
+    <script type="text/javascript">
+        function exitFromApp()
+        {
+            //console.log("in button");
+            navigator.app.exitApp();
+        }
+    </script>
+
+
+<script type="application/javascript" src="components/fastclick.js"></script> 
+<script type="application/javascript">
+    window.addEventListener('load', function () {
+        FastClick.attach(document.body);
+    }, false);
+</script>
+</head>
+
+<body class="app">
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <script type="text/javascript" src="js/index.js"></script>
+    <section>
+        <header>
+            <nav class="left">
+                <a href="#menu-aside" data-router="aside" data-icon="menu"></a>
+            </nav>
+            <div class="title centered">Pedaleros</div>
+        </header>
+        <article id="inicio-article" class="list descroll imdented active">
+                    <div id="map"></div>
+                    <div style="text-align:center;">
+                        <input type="submit" value="Empezar" onclick="empezar()">
+                        <input type="submit" value="Terminar" onclick="window.clearInterval(int)">
+                    </div>
+        </article>
+        <article id="estadisticas-article" class="list scroll imdented">
+            <ul>
+                <li>
+                    <strong>Mis Estadisticas</strong>
+                </li>
+            </ul>
+        </article>
+        <article id="campanas-article" class="list scroll imdented">
+                <div style="width: 231px;height: 231px;margin-top: -115px;margin-left: -115px;left: 50%;top: 50%; position: absolute;" >
+                    <img src="img/construccion.png" alt="En construccion"/>
+                    <div style="text-align:center;font-size: 170%;font-weight:bold;">
+                        <strong><br>En Construcci&oacuten...</strong>
+                    </div>
+                </div>
+
+        </article>
+        <article id="configuracion-article" class="list scroll imdented">
+                <div style="width: 231px;height: 231px;margin-top: -115px;margin-left: -115px;left: 50%;top: 50%; position: absolute;" >
+                    <img src="img/construccion.png" alt="En construccion"/>
+                    <div style="text-align:center;font-size: 170%;font-weight:bold;">
+                        <strong><br>En Construcci&oacuten...</strong>
+                    </div>
+                </div>
+
+        </article>
+        <article id="about-article" class="list scroll imdented">
+            <ul>
+                <li>
+                    <strong>Sobre nosotros...</strong>
+                </li>
+            </ul>
+        </article>
+        <article id="salir-article" class="list scroll imdented">
+            <ul>
+                <li>
+                    <strong>Como salgo!</strong>
+                    <input type="submit" onclick="exitFromApp()" value="exit"/>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <aside id="menu-aside" class="left">
+
+        <article class="list scroll active">
+            <ul>
+                <li class="active" data-icon="pushpin">
+                    <a href="#inicio-article" data-router="article">
+                        <strong>Inicio</strong>
+                        <small>Graba tu ruta!</small>
+                    </a>
+                </li>
+                <li data-icon="vcard">
+                    <a href="#estadisticas-article" data-router="article">
+                    <strong>Mis Estadist&iacutecas</strong>
+                    <small>Tus marcas y estadist&iacutecas</small>
+                    </a>
+                </li>
+                <li data-icon="users">
+                    <a href="#campanas-article" data-router="article">
+                    <strong>Campa&ntildeas</strong>
+                    <small>Ciclistas unidos por tu ciudad</small>
+                    </a>
+                </li>
+                <li data-icon="settings">
+                    <a href="#configuracion-article" data-router="article">
+                    <strong>Configuraci&oacuten</strong>
+                    <small>Cambia tu configuraci&oacuten</small>
+                    </a>
+                </li>
+                <li data-icon="info">
+                    <a href="#about-article" data-router="article">
+                    <strong>Acerca de</strong>
+                    <small>Cr&eacuteditos ;)</small>
+                    </a>
+                </li>
+                <li data-icon="multiply">
+                    <a href="#" data-router="article" onclick="exitFromApp()" value="exit">
+                    <strong>Salir</strong>
+                    <small>Te extra&ntildearemos... :'(</small>
+                    </a>
+                </li>                
+            </ul>
+        </article>
+    </aside>
+
+    <!-- Lungo - Dependencies -->
+    <script src="components/quojs/quo.js"></script>
+    <script src="components/lungo/lungo.js"></script>
+    <!-- Lungo - Sandbox App -->
+    <script>
+        Lungo.init({
+            name: 'LungoTest'
+        });
+    </script>
+
+<script>
+        // inicializamos el mapa, le damos lat long y zoom
+        var map = new L.Map('map', {
+          center: new L.LatLng(-33.438622,-70.572374),
+          zoom: 17
+        });
+        // creamos la tile layer, el mapa que es la base
+        var tileUrl = 'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
+        layer = new L.TileLayer(tileUrl, {          attribution: 'Mapa por OpenStreetMap.', maxZoom: 18});
+        //se instancian las capas KML que se utilizarar
+        var ciclovias = new L.KML("http://dl.dropboxusercontent.com/u/75225365/dal/CiclovasSantiago2012-2013.kml", {async: true});
+        var talleresytiendas = new L.KML("http://dl.dropboxusercontent.com/u/75225365/dal/TalleresyoTiendasDeBicicletasEnSantiago.kml", {async: true});
+        var estacionamientos = new L.KML("http://dl.dropboxusercontent.com/u/75225365/dal/CicleterosSantiagoEstacionamientos.kml", {async: true});
+        //añadimos capas KML y el mapa base 'layer'
+        map.addLayer(ciclovias);
+        map.addLayer(talleresytiendas);
+        map.addLayer(estacionamientos);
+
+        map.addLayer(layer);
+        //se añade un controlador de capas
+        map.addControl(new L.Control.Layers({}, {'Ciclovias':ciclovias,'Talleres y Tiendas':talleresytiendas,'Estacionamientos':estacionamientos}));
+
+
+        function empezar(){
+            var coordenadas = []; //Guarda las coordenadas en la estructura de datos LatLng de Leaflet.
+            var linea = new L.polyline(coordenadas, {color: '#008C24', weight: 20, opacity: 3}); //Forma la linea que se muestra en el mapa.
+            /*var map = L.map('map');     
+            L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Mapa por OpenStreetMap.'
+            }).addTo(map);*/
+            function onLocationFound(e) {
+                var radius = e.accuracy / 2;
+            }
+
+            function onLocationError(e) {
+                alert(e.message);
+            }
+
+            map.on('locationfound', onLocationFound);
+            map.on('locationerror', onLocationError);
+            map.locate({setView: true, zoom: 17});
+
+            function geolocal(){
+                var options = {
+                  enableHighAccuracy: true,
+                  timeout: 5000,
+                  maximumAge: 0
+                    };
+
+            function success(pos) {
+                var crd = pos.coords;
+                if(coordenadas.length==0){
+                    linea.addLatLng(new L.LatLng(crd.latitude, crd.longitude));
+                    //document.getElementById('campo').innerHTML = 'Latitude : ' + crd.latitude+' Longitude: ' + crd.longitude;
+                    map.locate({setView: true, zoom: 17});
+                    }
+                else{
+                    var ultimoElem= coordenadas.length -1;
+                    if((coordenadas[ultimoElem]-crd)<=0.00001){
+                        linea.addLatLng(new L.LatLng(crd.latitude, crd.longitude));
+                        //document.getElementById('campo').innerHTML = 'Latitude : ' + crd.latitude+' Longitude: ' + crd.longitude;
+                        map.locate({setView: true, zoom: 17});
+                        }
+                    }
+                };
+
+            function error(err) {
+              console.warn('ERROR(' + err.code + '): ' + err.message);
+                };
+
+            navigator.geolocation.getCurrentPosition(success, error, options);
+            
+            linea.addTo(map); //Variable tipo Polyline que dibuja la linea.
+            //coordenadas = linea.getLatLngs(); //Con esta instrucción se obtienen todas las coordenadas (tipo de dato LatLng de Leaflet)
+            
+            }
+            
+            int =self.setInterval(function(){               
+                geolocal();
+                }, 3000);   
+        }
+</script>
+    
+</body>
+</html>
